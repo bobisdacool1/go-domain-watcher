@@ -19,7 +19,7 @@ Both we have administrators, who want to get statistics for this endpoints
 
 ## Endpoints
 
-[https//localhost:54](https//localhost:54)
+[https://localhost:54](https://localhost:54)
 
 | Endpoint         | Description                                    |
 |------------------|------------------------------------------------|
