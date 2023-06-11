@@ -1,9 +1,9 @@
 package storage
 
 import (
+	"go-domain-watcher/internal/network"
 	"sync"
 	"time"
-	"url-accessibility-checker/internal/network"
 )
 
 type (

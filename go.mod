@@ -1,4 +1,4 @@
-module url-accessibility-checker
+module go-domain-watcher
 
 go 1.19
 

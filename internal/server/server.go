@@ -4,8 +4,8 @@ import (
 	"github.com/buaazp/fasthttprouter"
 	"github.com/mssola/useragent"
 	"github.com/valyala/fasthttp"
-	"url-accessibility-checker/internal/stats"
-	domainStorage "url-accessibility-checker/internal/storage"
+	"go-domain-watcher/internal/stats"
+	domainStorage "go-domain-watcher/internal/storage"
 )
 
 type (

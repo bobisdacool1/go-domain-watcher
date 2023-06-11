@@ -1,8 +1,8 @@
 package main
 
 import (
+	"go-domain-watcher/internal/server"
 	"log"
-	"url-accessibility-checker/internal/server"
 )
 
 func main() {
