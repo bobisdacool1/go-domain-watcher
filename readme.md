@@ -14,8 +14,9 @@ Both we have administrators, who want to get statistics for this endpoints
 
 ## Usage
 
-1. `go run ./cmd/server/main.go`
-2. You're done!
+1. `go mod download`
+2. `go run ./cmd/server/main.go`
+3. You're done!
 
 ## Endpoints
 
