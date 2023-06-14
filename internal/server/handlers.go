@@ -25,7 +25,7 @@ const (
 )
 
 func HandleSpecial(ctx *fasthttp.RequestCtx) {
-	defer updateStats(specialDomainEndpoint, ctx)
+	defer updateStats(ctx, specialDomainEndpoint)
 
 	storage := domainStorage.GetStorage()
 	availableDomains := storage.GetAvailableDomains()
@@ -54,7 +54,7 @@ func HandleSpecial(ctx *fasthttp.RequestCtx) {
 }
 
 func HandleMinPing(ctx *fasthttp.RequestCtx) {
-	defer updateStats(minPingEndpoint, ctx)
+	defer updateStats(ctx, minPingEndpoint)
 
 	storage := domainStorage.GetStorage()
 	availableDomains := storage.GetAvailableDomains()
@@ -69,7 +69,7 @@ func HandleMinPing(ctx *fasthttp.RequestCtx) {
 }
 
 func HandleMaxPing(ctx *fasthttp.RequestCtx) {
-	defer updateStats(maxPingEndpoint, ctx)
+	defer updateStats(ctx, maxPingEndpoint)
 
 	storage := domainStorage.GetStorage()
 	availableDomains := storage.GetAvailableDomains()
@@ -84,7 +84,7 @@ func HandleMaxPing(ctx *fasthttp.RequestCtx) {
 }
 
 func HandleStats(ctx *fasthttp.RequestCtx) {
-	defer updateStats(statsEndpoint, ctx)
+	defer updateStats(ctx, statsEndpoint)
 	if statsService == nil {
 		fmt.Fprint(ctx, "No stats yet :(")
 		return

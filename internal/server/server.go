@@ -39,7 +39,7 @@ func (s *Server) Listen() error {
 	return nil
 }
 
-func updateStats(endpoint stats.Endpoint, ctx *fasthttp.RequestCtx) {
+func updateStats(ctx *fasthttp.RequestCtx, endpoint stats.Endpoint) {
 	if statsService == nil {
 		statsService = stats.NewService()
 	}

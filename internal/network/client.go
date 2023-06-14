@@ -28,12 +28,11 @@ func PingUrl(url string) *Response {
 		url = fmt.Sprintf("https://%v", url)
 		statusCode, _, err := c.Get(nil, url)
 
-		ch <- newResponse(statusCode, time.Since(timer))
-
 		if err != nil {
 			fmt.Printf("Got error while ping, %v\n", err)
 			return
 		}
+		ch <- newResponse(statusCode, time.Since(timer))
 	}()
 
 	select {
